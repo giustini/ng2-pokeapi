@@ -6,6 +6,7 @@ import { Pokemon } from "../model/pokemon/pokemon.model";
 import { PokemonStats } from "../model/pokemon/pokemon-stats.model";
 import { PokemonStat } from "../model/pokemon/pokemon-stat.model";
 import { PokemonSprites } from "../model/pokemon/pokemon-sprites.model";
+import { PokemonTypes } from "../model/pokemon/pokemon-types.model";
 
 @Injectable()
 export class PokemonDAO extends BaseDAO {
@@ -24,9 +25,17 @@ export class PokemonDAO extends BaseDAO {
         data.is_default,
         data.order,
         data.weight,
+        this.buildTypes(data.types),
         this.buildSprites(data.sprites),
         this.buildStats(data.stats)
       ));
+  }
+
+  private buildTypes(rawTypes:any[]):PokemonTypes {
+    return new PokemonTypes(
+      rawTypes.find(type => type.slot === 1)["type"]["name"],
+      rawTypes.find(type => type.slot === 2)["type"]["name"]
+    );
   }
 
   private buildStats(rawStats:any[]):PokemonStats {
