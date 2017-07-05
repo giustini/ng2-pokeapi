@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { PokemonDAO } from "../daos/pokemon.dao";
-import { Pokemon } from "../model/pokemon.model";
+import { Pokemon } from "../model/pokemon/pokemon.model";
 import { Observable } from "rxjs";
 
 @Injectable()

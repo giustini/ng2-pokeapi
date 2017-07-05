@@ -2,10 +2,10 @@ import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
 import { Observable } from "rxjs";
 import { BaseDAO } from "./base.dao";
-import { Pokemon } from "../model/pokemon.model";
-import { PokemonStats } from "../model/pokemon-stats.model";
-import { PokemonStat } from "../model/pokemon-stat.model";
-import { PokemonSprites } from "../model/pokemon-sprites.model";
+import { Pokemon } from "../model/pokemon/pokemon.model";
+import { PokemonStats } from "../model/pokemon/pokemon-stats.model";
+import { PokemonStat } from "../model/pokemon/pokemon-stat.model";
+import { PokemonSprites } from "../model/pokemon/pokemon-sprites.model";
 
 @Injectable()
 export class PokemonDAO extends BaseDAO {
