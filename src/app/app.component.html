@@ -3,6 +3,14 @@
     Welcome to {{title}}!!
   </h1>
   <h2>#{{ pokemon?.order }} {{ pokemon?.name }}</h2>
+  <img src="{{ pokemon?.sprites.frontDefault }}">
+  <img src="{{ pokemon?.sprites.backDefault }}">
+  <img src="{{ pokemon?.sprites.frontFemale }}">
+  <img src="{{ pokemon?.sprites.backFemale }}">
+  <img src="{{ pokemon?.sprites.frontShiny }}">
+  <img src="{{ pokemon?.sprites.backShiny }}">
+  <img src="{{ pokemon?.sprites.frontShinyFemale }}">
+  <img src="{{ pokemon?.sprites.backShinyFemale }}">
   <h4>ID: {{ pokemon?.id }}</h4>
   <h4>Exp. base: {{ pokemon?.baseExperience }}</h4>
   <h4>Altura: {{ pokemon?.height / 10 }}m</h4>
