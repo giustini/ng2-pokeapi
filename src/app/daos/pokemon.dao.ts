@@ -16,7 +16,15 @@ export class PokemonDAO extends BaseDAO {
   }
 
   public getPokemonById(id:number):Observable<Pokemon> {
-    return this.get(id).map(response => response.json()).map(
+    return this.getPokemon(id);
+  }
+
+  public getPokemonByName(name:string):Observable<Pokemon> {
+    return this.getPokemon(name);
+  }
+
+  private getPokemon(idOrName):Observable<Pokemon> {
+    return this.get(idOrName).map(response => response.json()).map(
       data => new Pokemon(
         data.id,
         data.name,

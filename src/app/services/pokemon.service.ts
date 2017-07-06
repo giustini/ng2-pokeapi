@@ -12,4 +12,8 @@ export class PokemonService {
   getPokemonById(id:number):Observable<Pokemon> {
     return this.pokemonDAO.getPokemonById(id);
   }
+
+  getPokemonByName(name:string):Observable<Pokemon> {
+    return this.pokemonDAO.getPokemonByName(name);
+  }
 }

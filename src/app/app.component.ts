@@ -10,9 +10,8 @@ import { Pokemon } from "./model/pokemon/pokemon.model";
 })
 export class AppComponent implements OnInit {
 
-  title = 'pokéapi Angular client';
-
-  pokemon:Pokemon;
+  pokemon1:Pokemon;
+  pokemon2:Pokemon;
 
   constructor(private pokemonService:PokemonService) {
 
@@ -22,7 +21,16 @@ export class AppComponent implements OnInit {
     this.pokemonService.getPokemonById(1)
       .subscribe(
         (pokemon => {
-          this.pokemon = pokemon
+          this.pokemon1 = pokemon
+        }),
+        (error) => console.log(error),
+        (() => console.log('Request completed!'))
+      );
+
+    this.pokemonService.getPokemonByName("mew")
+      .subscribe(
+        (pokemon => {
+          this.pokemon2 = pokemon
         }),
         (error) => console.log(error),
         (() => console.log('Request completed!'))
