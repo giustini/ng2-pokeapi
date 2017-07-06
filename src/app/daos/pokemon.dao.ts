@@ -42,7 +42,8 @@ export class PokemonDAO extends BaseDAO {
   private buildTypes(rawTypes:any[]):PokemonTypes {
     return new PokemonTypes(
       rawTypes.find(type => type.slot === 1)["type"]["name"],
-      rawTypes.find(type => type.slot === 2)["type"]["name"]
+      rawTypes.find(type => type.slot === 2) ?
+        rawTypes.find(type => type.slot === 2)["type"]["name"]:null
     );
   }
 
