@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class Ng2PokeapiPage {
+export class NgxPokeapiPage {
   navigateTo() {
     return browser.get('/');
   }

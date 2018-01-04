@@ -1,10 +1,10 @@
-import { Ng2PokeapiPage } from './app.po';
+import { NgxPokeapiPage } from './app.po';
 
-describe('ng2-pokeapi App', () => {
-  let page: Ng2PokeapiPage;
+describe('ngx-pokeapi App', () => {
+  let page: NgxPokeapiPage;
 
   beforeEach(() => {
-    page = new Ng2PokeapiPage();
+    page = new NgxPokeapiPage();
   });
 
   it('should display welcome message', () => {

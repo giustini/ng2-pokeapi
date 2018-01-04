@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 export abstract class BaseDAO {
 
   protected headers = new Headers({'Content-Type': 'application/json'});
-  protected baseURL = "http://pokeapi.co/api/v2/";
+  protected baseURL = "https://pokeapi.co/api/v2/";
   protected http:Http;
 
   constructor(http:Http, entity:string) {
